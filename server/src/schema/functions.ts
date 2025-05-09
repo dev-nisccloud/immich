@@ -23,6 +23,17 @@ export const immich_uuid_v7 = registerFunction({
   synchronize: false,
 });
 
+export const album_user_after_insert = registerFunction({
+  name: 'album_user_after_insert',
+  returnType: 'TRIGGER',
+  language: 'PLPGSQL',
+  body: `
+    BEGIN
+      UPDATE album SET "updatedAt" = clock_timestamp(), "updateId" = immich_uuid_v7(clock_timestamp())
+      WHERE "id" IN (SELECT DISTINCT "albumsId" FROM inserted_rows);
+    END`,
+});
+
 export const updated_at = registerFunction({
   name: 'updated_at',
   returnType: 'TRIGGER',

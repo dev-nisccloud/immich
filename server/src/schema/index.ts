@@ -1,5 +1,6 @@
 import { asset_face_source_type, asset_visibility_enum, assets_status_enum } from 'src/schema/enums';
 import {
+  album_user_after_insert,
   assets_delete_audit,
   f_concat_ws,
   f_unaccent,
@@ -45,10 +46,9 @@ import { UserAuditTable } from 'src/schema/tables/user-audit.table';
 import { UserMetadataTable } from 'src/schema/tables/user-metadata.table';
 import { UserTable } from 'src/schema/tables/user.table';
 import { VersionHistoryTable } from 'src/schema/tables/version-history.table';
-import { ConfigurationParameter, Database, Extensions } from 'src/sql-tools';
+import { Database, Extensions } from 'src/sql-tools';
 
 @Extensions(['uuid-ossp', 'unaccent', 'cube', 'earthdistance', 'pg_trgm', 'plpgsql'])
-@ConfigurationParameter({ name: 'search_path', value: () => '"$user", public, vectors', scope: 'database' })
 @Database({ name: 'immich' })
 export class ImmichDatabase {
   tables = [
@@ -99,6 +99,7 @@ export class ImmichDatabase {
     users_delete_audit,
     partners_delete_audit,
     assets_delete_audit,
+    album_user_after_insert,
   ];
 
   enum = [assets_status_enum, asset_face_source_type, asset_visibility_enum];
