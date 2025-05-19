@@ -132,7 +132,7 @@
 
         <ThemeButton padding="2" />
 
-        <div>
+        <!-- <div>
           <IconButton
             shape="round"
             color="secondary"
@@ -142,7 +142,7 @@
             onclick={() => info && modalManager.show(HelpAndFeedbackModal, { info })}
             aria-label={$t('support_and_feedback')}
           />
-        </div>
+        </div> -->
 
         <div
           use:clickOutside={{

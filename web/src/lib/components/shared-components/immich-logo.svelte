@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { t } from 'svelte-i18n';
   import type { HTMLImgAttributes } from 'svelte/elements';
 
   interface Props extends HTMLImgAttributes {
@@ -11,6 +10,7 @@
   const viewBox = $derived(`0 0 ${noText ? '260' : '792'} 266.25`);
 </script>
 
+<!-- Original SVG logo commented out
 <svg {viewBox} class={cssClass}>
   <title>{$t('immich_logo')}</title>
   {#if !noText}
@@ -92,6 +92,9 @@
     />
   </g>
 </svg>
+-->
+
+<img src="/ashut_logo.png" alt="Ashut Logo" class={cssClass} />
 
 <style>
   .st0 {

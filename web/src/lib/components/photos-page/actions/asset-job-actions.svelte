@@ -7,8 +7,8 @@
   import { getAssetJobIcon, getAssetJobMessage, getAssetJobName } from '$lib/utils';
   import { handleError } from '$lib/utils/handle-error';
   import { AssetJobName, AssetTypeEnum, runAssetJobs } from '@immich/sdk';
-  import { getAssetControlContext } from '../asset-select-control-bar.svelte';
   import { t } from 'svelte-i18n';
+  import { getAssetControlContext } from '../asset-select-control-bar.svelte';
 
   interface Props {
     jobs?: AssetJobName[];
@@ -34,7 +34,7 @@
 </script>
 
 {#each jobs as job (job)}
-  {#if isAllVideos || job !== AssetJobName.TranscodeVideo}
+  {#if (isAllVideos || job !== AssetJobName.TranscodeVideo) && job !== AssetJobName.RefreshFaces}
     <MenuOption text={$getAssetJobName(job)} icon={getAssetJobIcon(job)} onClick={() => handleRunJob(job)} />
   {/if}
 {/each}

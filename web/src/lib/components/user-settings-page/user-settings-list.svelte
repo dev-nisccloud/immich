@@ -4,7 +4,6 @@
   import DownloadSettings from '$lib/components/user-settings-page/download-settings.svelte';
   import FeatureSettings from '$lib/components/user-settings-page/feature-settings.svelte';
   import NotificationsSettings from '$lib/components/user-settings-page/notifications-settings.svelte';
-  import UserPurchaseSettings from '$lib/components/user-settings-page/user-purchase-settings.svelte';
   import UserUsageStatistic from '$lib/components/user-settings-page/user-usage-statistic.svelte';
   import { OpenSettingQueryParameterValue, QueryParameter } from '$lib/constants';
   import { featureFlags } from '$lib/stores/server-config.store';
@@ -20,7 +19,6 @@
     mdiDevices,
     mdiDownload,
     mdiFeatureSearchOutline,
-    mdiKeyOutline,
     mdiLockSmart,
     mdiOnepassword,
     mdiServerOutline,
@@ -147,7 +145,7 @@
     <ChangePinCodeSettings />
   </SettingAccordion>
 
-  <SettingAccordion
+  <!-- <SettingAccordion
     icon={mdiKeyOutline}
     key="user-purchase-settings"
     title={$t('user_purchase_settings')}
@@ -155,5 +153,5 @@
     autoScrollTo={true}
   >
     <UserPurchaseSettings />
-  </SettingAccordion>
+  </SettingAccordion> -->
 </SettingAccordionState>

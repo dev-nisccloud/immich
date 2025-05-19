@@ -18,6 +18,10 @@ mobile/openapi/test
 mobile/openapi/doc
 mobile/openapi/.openapi-generator/FILES
 
+docker/library/
+docker/upload/
+docker/postgres/
+
 open-api/typescript-sdk/build
 mobile/android/fastlane/report.xml
 mobile/ios/fastlane/report.xml

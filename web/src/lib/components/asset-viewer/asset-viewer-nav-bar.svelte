@@ -189,9 +189,6 @@
           {#if person}
             <SetFeaturedPhotoAction {asset} {person} />
           {/if}
-          {#if asset.type === AssetTypeEnum.Image && !isLocked}
-            <SetProfilePictureAction {asset} />
-          {/if}
 
           {#if !isLocked}
             <ArchiveAction {asset} {onAction} {preAction} />
