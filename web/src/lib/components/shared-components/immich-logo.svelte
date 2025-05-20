@@ -94,7 +94,7 @@
 </svg>
 -->
 
-<img src="/ashut_logo.png" alt="Ashut Logo" class={cssClass} width="150" height="150" />
+<img src="/ashut_logo.png" alt="Ashut Logo" class={cssClass} width="150" height="200" />
 
 <style>
   .st0 {

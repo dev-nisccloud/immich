@@ -210,11 +210,11 @@
             <SetVisibilityAction {asset} {onAction} {preAction} />
           {/if}
           <hr />
-          <MenuOption
+          <!-- <MenuOption
             icon={mdiHeadSyncOutline}
             onClick={() => onRunJob(AssetJobName.RefreshFaces)}
             text={$getAssetJobName(AssetJobName.RefreshFaces)}
-          />
+          /> -->
           <MenuOption
             icon={mdiDatabaseRefreshOutline}
             onClick={() => onRunJob(AssetJobName.RefreshMetadata)}

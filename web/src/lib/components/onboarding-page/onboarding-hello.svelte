@@ -14,7 +14,7 @@
 </script>
 
 <OnboardingCard>
-  <ImmichLogo noText class="h-[50px]" />
+  <ImmichLogo noText class="h-[50px] w-[50px]" />
   <p class="font-medium text-6xl my-6 text-immich-primary dark:text-immich-dark-primary">
     {$t('onboarding_welcome_user', { values: { user: $user.name } })}
   </p>
