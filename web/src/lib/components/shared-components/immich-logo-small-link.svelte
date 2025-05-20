@@ -4,5 +4,5 @@
 </script>
 
 <a data-sveltekit-preload-data="hover" class="ms-4" href="/">
-  <ImmichLogo class="h-[80px] max-w-none md:w-auto md:max-w-full" noText={mobileDevice.maxMd} />
+  <ImmichLogo class="h-[80px] w-[80px] max-w-none" noText={mobileDevice.maxMd} />
 </a>
